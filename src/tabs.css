@@ -1,0 +1,97 @@
+
+:root {
+    /* To notify JS of which is current theme */
+    --theme: dark;
+
+    /* Other */
+    --tab-text-size: 11pt;
+}
+
+body {
+    background-color: var(--background-1);
+}
+
+/* Box containing list of tabs */
+#tab-box {
+    /* Scroll when full height is reached */
+    overflow: scroll;
+    /* Flex box */
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+
+
+.tab {
+
+    font-size: var(--tab-text-size);
+
+    /* somewhat hacky way of centring content vertically */
+    height: 2em;
+    padding: 1em;
+    padding-bottom: 2em;
+
+    color: var(--text-2);
+
+    border-radius: 10px;
+
+    /* Cut off name at edge */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* For favicons */
+.favicon {
+    height: var(--tab-text-size);
+    width: var(--tab-text-size);
+    margin-right: var(--tab-text-size);
+}
+
+.tab:hover {
+    /* Background color change when hovering */
+    background-color: var(--background-2);
+}
+
+.active-tab {
+    /* Active tab should stand out */
+    font-weight: bold;
+    color: var(--text-1);
+}
+
+.top-button-bar {
+    /* Flex box */
+    display: flex;
+    flex-direction: row;
+    /* Gap between buttons and on edges */
+    column-gap: 10px;
+    margin: 10px;
+}
+
+.top-button {
+    padding: 20px;
+    background-color: var(--background-2);
+    flex: 2 1 auto;
+    border-radius: 10px;
+    
+    /* Centre icon */
+    text-align: center;
+
+
+    color: var(--text-1);
+}
+
+.top-button:hover {
+    color: var(--text-3);
+    background-color: var(--background-3);
+}
+
+.close-tab {
+    position: absolute;
+    right: 10px;
+}
+
+
+
+

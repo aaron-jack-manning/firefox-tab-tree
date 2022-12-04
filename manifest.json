@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Tab Tree",
+  "description": "Adds a file tree style tab sidebar.",
+  "version": "0.0",
+  "browser_specific_settings": {
+    "gecko": {
+      "strict_min_version": "54.0a1"
+    }
+  },
+
+  "sidebar_action": {
+    "default_title" : "Tabs",
+    "default_panel": "src/tabs.html"
+  },
+
+  "permissions": [
+    "menus",
+    "menus.overrideContext",
+    "theme",
+    "tabs",
+    "activeTab",
+    "contextMenus",
+    "bookmarks"
+  ]
+}
